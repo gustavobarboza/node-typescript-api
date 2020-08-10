@@ -1,0 +1,47 @@
+{
+  "name": "typescript-api",
+  "version": "1.0.0",
+  "description": "Typescript and Node.js API",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "yarn build && node dist/src/index.js",
+    "start:dev": "ts-node-dev src/index.ts",
+    "lint": "eslint ./src ./test --ext .ts",
+    "lint:fix": "eslint ./src ./test  --ext .ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:functional": "jest --projects ./test --forceExit --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavobarboza/node-typescript-api.git"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "api"
+  ],
+  "author": "Gustavo Barboza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavobarboza/node-typescript-api/issues"
+  },
+  "homepage": "https://github.com/gustavobarboza/node-typescript-api#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/module-alias": "^2.0.0",
+    "@types/node": "^13.13.2",
+    "@types/supertest": "^2.0.9",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "jest": "^26.0.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.0.0",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  }
+}
