@@ -9,8 +9,7 @@
     "start:dev": "ts-node-dev src/index.ts",
     "lint": "eslint ./src ./test --ext .ts",
     "lint:fix": "eslint ./src ./test  --ext .ts --fix",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test:functional": "jest --projects ./test --forceExit --runInBand"
+    "test:functional": "jest --projects ./test --no-cache --runInBand"
   },
   "repository": {
     "type": "git",
@@ -28,6 +27,7 @@
   },
   "homepage": "https://github.com/gustavobarboza/node-typescript-api#readme",
   "devDependencies": {
+    "@types/express": "^4.17.7",
     "@types/jest": "^25.2.1",
     "@types/module-alias": "^2.0.0",
     "@types/node": "^13.13.2",
@@ -42,6 +42,9 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "@overnightjs/core": "^1.7.4",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "module-alias": "^2.2.2"
   }
 }
